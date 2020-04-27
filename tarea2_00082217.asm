@@ -18,9 +18,11 @@ lup: 	mov bl,[mensaje+di]
 mult:   mul     cx
         mov     [bx], ax
         cmp     ah, 00h
-        ja      lupi
+        ja      lop
+          je      pre
     lupi:  add     bx, 2h
-        jmp     sig
+     jmp     sig
+        lop:    add     bx, 1h
 sig:    cmp     bx, 21Fh
         jb      mult
 
