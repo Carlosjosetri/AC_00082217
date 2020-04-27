@@ -26,15 +26,14 @@ sig:    cmp     bx, 21Fh
 
 
 ;ej3
-
-        mov     cx, 0000h
+ mov     cx, 0000h
         mov     cx, 0h
         mov     [220h], cx
         mov     cx, 1h
         mov     [221h],cx 
         mov     bx, 221h
 
-lupi:   add     bx, 1h     
+lupi2:   add     bx, 1h     
         mov     dx, 0000h
         mov     [bx], dx
         add     [bx], ax
@@ -42,7 +41,7 @@ lupi:   add     bx, 1h
         mov     ax, cx
         mov     cx, [bx]
         cmp     bx, 22Eh
-        jne     lupi
+        jne     lupi2
 
 
         int 20h
